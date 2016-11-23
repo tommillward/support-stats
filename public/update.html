@@ -1,0 +1,290 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Update Support Stats </title>
+
+	<link rel="stylesheet" href="./css/stylesheet.css">
+	<link rel="stylesheet" href="./css/stylesheet2.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+                        //EMAIL ADDRESS
+
+            //var errorField = $('.form-input-email-row');
+
+            //errorField.addClass('form-invalid-data');
+            //errorField.find('.form-invalid-data-info').text('Please enter your Email');
+
+            // CONSTANTS
+            var VALIDATION_SUCCESS_CLASS = 'form-valid-data';
+            var VALIDATION_ERROR_CLASS = 'form-invalid-data';
+            var VALIDATION_MESSAGE = 'form-invalid-data-info';
+
+            $('input').blur(function(){
+
+                console.log("Input blurred!",$(this).val());
+
+                if($(this).val() == "") {
+                    $(this)
+                        .closest(".form-row")
+                        .removeClass(VALIDATION_SUCCESS_CLASS)
+                        .addClass(VALIDATION_ERROR_CLASS)
+                        .find('.'+VALIDATION_MESSAGE)
+                        .text($(this).data('error-msg'));
+                } else {
+                    $(this)
+                        .closest(".form-row")
+                        .removeClass(VALIDATION_ERROR_CLASS)
+                        .addClass(VALIDATION_SUCCESS_CLASS)
+                        .find('.'+VALIDATION_MESSAGE)
+                        .text("");
+                }
+
+            });
+
+            function isNumber(str) {
+                return isNaN(str);
+            }
+
+            // var successField = $('.form-input-email-row');
+
+            // successField.addClass('form-valid-data');
+
+            //             // CLIENT NAME
+            // var errorField = $('.form-input-c_name-row');
+
+            // errorField.addClass('form-invalid-data');
+            // errorField.find('.form-invalid-data-info').text('Please enter the Client name');
+
+            //             // CLIENT ID
+            // var errorField = $('.form-input-c_id-row');
+
+            // errorField.addClass('form-invalid-data');
+            // errorField.find('.form-invalid-data-info').text('Please enter the Client ID');
+
+
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+
+    <img class='logo' src ='http://2014.jsconf.eu/sponsors/images/brandwatch.png'>
+
+	<header>
+		<h1>Support Stats - Update Page</h1>
+
+
+    </header>
+
+    <div class="main-content">
+
+        <form class="form-validation" method="POST" action="">
+
+            <div class="form-title-row">
+                <h1>New Stats</h1>
+            </div>
+
+            <!--
+            attachment
+
+            <div class="form-row form-input-attach-row">
+
+                <label>
+                    <span>attach</span>
+                    <input type="file" name="attach" maxlength=50 allow="text/*">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            -->
+
+
+						<div class="form-row form-input-email-row">
+
+								<label>
+										<span>Month</span>
+										<input type="text" name="month" data-error-msg="Enter Month">
+								</label>
+
+								<span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+								<span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+								<span class="form-invalid-data-info"></span>
+
+						</div>
+
+                    <!-- EMAIL ADDRESS-->
+
+            <div class="form-row form-input-email-row">
+
+                <label>
+                    <span>Tickets Created</span>
+                    <input type="text" name="openTickets" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!--CLIENT NAME -->
+
+            <div class="form-row form-input-c_name-row">
+
+                <label>
+                    <span>Tickets Solved</span>
+                    <input type="text" name="ticketsSolved" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!-- CLIENT ID -->
+
+            <div class="form-row form-input-c_id-row">
+
+                <label>
+                    <span>Average First Response</span>
+                    <input type="text" name="firstResponse" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!-- ADMIN EMAIL -->
+
+            <div class="form-row form-input-a_email-row">
+
+                <label>
+                    <span>Average Resolution Time </span>
+                    <input type="text" name="resolution" data-error-msg="Enter number" >
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!-- ADMIN ID -->
+
+            <div class="form-row form-input-a_id-row">
+
+                <label>
+                    <span>Customer Satisfaction</span>
+                    <input type="text" name="satisfactionScore" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                        <!-- MAX USERS -->
+
+            <div class="form-row form-input-users-row">
+
+                <label>
+                    <span>Satifaction Response</span>
+                    <input type="text" name="satResponse" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!-- MAX ADMIN USER -->
+
+            <div class="form-row form-input-a_users-row">
+
+                <label>
+                    <span>#SLA Violations</span>
+                    <input type="text" name="slaNum" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!-- MAX INSTALLATIONS -->
+
+            <div class="form-row form-input-instal-row">
+
+                <label>
+                    <span>%SLA Violations</span>
+                    <input type="text" name="slaPer" data-error-msg="Enter number">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+                    <!-- MAX DISAPLYS -->
+						<!--
+            <div class="form-row form-input-displays-row">
+
+                <label>
+                    <span>Scrolling Marquee Text</span>
+                    <input type="text" name="marquee">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div> -->
+
+
+
+            <div class="form-row">
+
+                <button type="submit" name="submit">UPDATE</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

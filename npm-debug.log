@@ -1,0 +1,119 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.4.1_1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '[-g]',
+1 verbose cli   '[--save-dev]',
+1 verbose cli   'reload' ]
+2 info using npm@3.5.3
+3 info using node@v5.4.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData [-g]
+8 silly fetchPackageMetaData [--save-dev]
+9 silly fetchPackageMetaData reload
+10 silly fetchOtherPackageData [-g]
+11 silly cache add args [ '[-g]', null ]
+12 verbose cache add spec [-g]
+13 silly fetchOtherPackageData [--save-dev]
+14 silly cache add args [ '[--save-dev]', null ]
+15 verbose cache add spec [--save-dev]
+16 silly fetchNamedPackageData reload
+17 silly mapToRegistry name reload
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/reload
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: '[-g]',
+21 silly cache add   scope: null,
+21 silly cache add   name: null,
+21 silly cache add   rawSpec: '[-g]',
+21 silly cache add   spec: '/Users/tomm/Documents/statsApp/[-g]',
+21 silly cache add   type: 'local' }
+22 silly cache add parsed spec Result {
+22 silly cache add   raw: '[--save-dev]',
+22 silly cache add   scope: null,
+22 silly cache add   name: null,
+22 silly cache add   rawSpec: '[--save-dev]',
+22 silly cache add   spec: '/Users/tomm/Documents/statsApp/[--save-dev]',
+22 silly cache add   type: 'local' }
+23 verbose request uri https://registry.npmjs.org/reload
+24 verbose request no auth needed
+25 info attempt registry request try #1 at 10:17:03 AM
+26 verbose request id 381a450ed240225e
+27 http request GET https://registry.npmjs.org/reload
+28 error addLocal Could not install /Users/tomm/Documents/statsApp/[-g]
+29 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[-g]'
+29 silly fetchPackageMetaData     at Error (native)
+29 silly fetchPackageMetaData  error for [-g] { [Error: ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[-g]']
+29 silly fetchPackageMetaData   errno: -2,
+29 silly fetchPackageMetaData   code: 'ENOENT',
+29 silly fetchPackageMetaData   syscall: 'open',
+29 silly fetchPackageMetaData   path: '/Users/tomm/Documents/statsApp/[-g]' }
+30 error addLocal Could not install /Users/tomm/Documents/statsApp/[--save-dev]
+31 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[--save-dev]'
+31 silly fetchPackageMetaData     at Error (native)
+31 silly fetchPackageMetaData  error for [--save-dev] { [Error: ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[--save-dev]']
+31 silly fetchPackageMetaData   errno: -2,
+31 silly fetchPackageMetaData   code: 'ENOENT',
+31 silly fetchPackageMetaData   syscall: 'open',
+31 silly fetchPackageMetaData   path: '/Users/tomm/Documents/statsApp/[--save-dev]' }
+32 http 200 https://registry.npmjs.org/reload
+33 verbose headers { server: 'nginx/1.10.1',
+33 verbose headers   'content-type': 'application/json',
+33 verbose headers   'last-modified': 'Wed, 16 Nov 2016 01:07:31 GMT',
+33 verbose headers   etag: 'W/"582bb153-6e46"',
+33 verbose headers   'content-encoding': 'gzip',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '5400',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Tue, 22 Nov 2016 10:17:03 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   age: '0',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-lcy1149-LCY',
+33 verbose headers   'x-cache': 'HIT',
+33 verbose headers   'x-cache-hits': '1',
+33 verbose headers   'x-timer': 'S1479809823.358148,VS0,VE17',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 silly get cb [ 200,
+34 silly get   { server: 'nginx/1.10.1',
+34 silly get     'content-type': 'application/json',
+34 silly get     'last-modified': 'Wed, 16 Nov 2016 01:07:31 GMT',
+34 silly get     etag: 'W/"582bb153-6e46"',
+34 silly get     'content-encoding': 'gzip',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     'content-length': '5400',
+34 silly get     'accept-ranges': 'bytes',
+34 silly get     date: 'Tue, 22 Nov 2016 10:17:03 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     age: '0',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-lcy1149-LCY',
+34 silly get     'x-cache': 'HIT',
+34 silly get     'x-cache-hits': '1',
+34 silly get     'x-timer': 'S1479809823.358148,VS0,VE17',
+34 silly get     vary: 'Accept-Encoding' } ]
+35 verbose get saving reload to /Users/tomm/.npm/registry.npmjs.org/reload/.cache.json
+36 silly rollbackFailedOptional Starting
+37 silly rollbackFailedOptional Finishing
+38 silly runTopLevelLifecycles Starting
+39 silly runTopLevelLifecycles Finishing
+40 silly install printInstalled
+41 verbose stack Error: ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[-g]'
+41 verbose stack     at Error (native)
+42 verbose cwd /Users/tomm/Documents/statsApp
+43 error Darwin 14.5.0
+44 error argv "/usr/local/Cellar/node/5.4.1_1/bin/node" "/usr/local/bin/npm" "install" "[-g]" "[--save-dev]" "reload"
+45 error node v5.4.1
+46 error npm  v3.5.3
+47 error path /Users/tomm/Documents/statsApp/[-g]
+48 error code ENOENT
+49 error errno -2
+50 error syscall open
+51 error enoent ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[-g]'
+52 error enoent ENOENT: no such file or directory, open '/Users/tomm/Documents/statsApp/[-g]'
+52 error enoent This is most likely not a problem with npm itself
+52 error enoent and is related to npm not being able to find a file.
+53 verbose exit [ -2, true ]
