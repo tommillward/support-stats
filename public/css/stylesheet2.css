@@ -28,9 +28,13 @@ header{
     padding: 25px 40px;
     background-color: rgb(0, 172, 237);
     overflow: hidden;
-    
+
 }
 
+h3 {
+  color: red;
+  margin-bottom: 30px;
+}
 
 header h1{
     float: left;
